@@ -1,11 +1,11 @@
-#terraform {
-#  required_providers {
-#    aws = {
-#      source = "hashicorp/aws"
-#      #      version = "~> 3.0"
-#    }
-#  }
-#}
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      #      version = "~> 3.0"
+    }
+ }
+}
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1" #insert your region code
@@ -15,7 +15,7 @@ resource "aws_cloudwatch_event_rule" "eventtosns" {
   event_pattern = jsonencode(
     {
       account = [
-        "889796695136", #insert  your account number
+        "", #insert  your account number
       ]
 
     }
